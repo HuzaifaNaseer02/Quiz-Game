@@ -185,13 +185,13 @@ def quiz_view(subj): #Take subject as argument
 
 def manage():
 	while True:
-		m_choice = input("Press 'V' to view all questions and press 'A' to add question: ")
+		m_choice = input("Select Your Option: \n1. View Questions\n2. Add Question\n")
 		m_choice = m_choice.upper()
-		if m_choice != "V" and m_choice != "A": #If input is not V neither A then,
-			print("Please select b/w V and A: ") # re-ask for a valid option
+		if m_choice != "1" and m_choice != "2": #If input is not V neither A then,
+			print("Please select b/w 1 and 2: ") # re-ask for a valid option
 		else:
 			break # If input is valid then, break out of loop
-	if m_choice == "V":
+	if m_choice == "1":
 		while True:
 			sub = input("Enter the subject (PST/SCI): ") # If input is V then ask the subject to be viewd
 			sub = sub.upper()
@@ -253,9 +253,9 @@ def login():
 	print("WELCOME TO QUIZ APP - "+ "'" +user_name + "'")
 	print()
 	while True:
-		choice = input("Do you want to take the quiz or Manage Quiz? (T/M): ")
+		choice = input("Select Your Option: \n1. Take Quiz\n2. Manage Quiz\n")
 		choice = choice.upper()
-		if choice != "T" and choice != "M":
+		if choice != "1" and choice != "2":
 			print("Please choose between T and M")
 			print()
 		else:
@@ -387,7 +387,7 @@ while True:
 	print('''===========================================
 --------------- QUIZ GAME ---------------
 ===========================================''')
-	if login() == "T":
+	if login() == "1":
 		if not quiz():
 			while True:
 				ch = input("Do you want to quit the app? (Y/N): ")
