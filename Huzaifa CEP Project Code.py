@@ -10,6 +10,8 @@
 
 #Just a line to test github push
 
+# checking push after cloning git repo
+
 import random
 
 #FUNCTION TO ADD A QUESTION
