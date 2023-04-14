@@ -65,7 +65,7 @@ def add_ques(subj): #Take subject as argument
 		while True:
 			opt = input("Enter the correct option (a/b/c/d):  ") #Input the correct asnwer
 			opt = opt.lower()
-			if opt != "a" and opt != "b" and opt != "c" and opt != "d": # If user anything other than a,b,c or d,
+			if opt not in ("a", "b", "c", "d"): # If user anything other than a,b,c or d,
 				print()
 				print("Please enter an option between a,b,c and d")#  then ask again for a valid option
 				print()
@@ -123,7 +123,7 @@ def add_ques(subj): #Take subject as argument
 		while True:
 			opt = input("Enter the correct option (a/b/c/d):  ")
 			opt = opt.lower()
-			if opt != "a" and opt != "b" and opt != "c" and opt != "d":
+			if opt not in ("a", "b", "c", "d"):
 				print()
 				print("Please enter an option between a,b,c and d")
 				print()
@@ -155,7 +155,7 @@ def quiz_view(subj): #Take subject as argument
 		print()
 		cho_ice = input("Do you want to add any question? (Y/N): ") # Prompt to add any question
 		cho_ice = cho_ice.upper()
-		if cho_ice != "Y" and cho_ice != "N": # Re-ask if other than Y or N is entered
+		if cho_ice not in ("Y", "N"): # Re-ask if other than Y or N is entered
 			print()
 			print("Please choose between Y and N")
 			print()
@@ -169,7 +169,7 @@ def quiz_view(subj): #Take subject as argument
 				print()
 				v_choice = input("Do you want to add another question? (Y/N): ")#After adding one question,ask for another
 				v_choice = v_choice.upper()
-				if v_choice != "Y" and v_choice != "N":
+				if v_choice not in ("Y", "N"):
 					print()
 					print("Please choose between Y and N")
 					print()
@@ -191,7 +191,7 @@ def manage():
 	while True:
 		m_choice = input("Select Your Option: \n1. View Questions\n2. Add Question\n")
 		m_choice = m_choice.upper()
-		if m_choice != "1" and m_choice != "2": #If input is not V neither A then,
+		if m_choice not in ("1", "2"): #If input is not V neither A then,
 			print("Please select b/w 1 and 2: ") # re-ask for a valid option
 		else:
 			break # If input is valid then, break out of loop
@@ -199,7 +199,7 @@ def manage():
 		while True:
 			sub = input("Enter the subject (PST/SCI): ") # If input is V then ask the subject to be viewd
 			sub = sub.upper()
-			if sub != "PST" and sub != "SCI": #If input is not PST neither A then,
+			if sub not in ("PST", "SCI"): #If input is not PST neither A then,
 				print()
 				print("Please choose between PST and SCI")# re-ask for a valid option
 				print()
@@ -212,7 +212,7 @@ def manage():
 			while True:
 				subjt = input("Enter the subject (PST/SCI): ")
 				subjt = subjt.upper()
-				if subjt != "PST" and subjt != "SCI":
+				if subjt not in ("PST", "SCI"):
 					print()
 					print("Please choose between PST  and SCI")
 					print()
@@ -222,7 +222,7 @@ def manage():
 			while True:
 				add_choice = input("Do you want to add another question? (Y/N): ")
 				add_choice = add_choice.upper()
-				if add_choice != "Y" and add_choice != "N":
+				if add_choice not in ("Y", "N"):
 					print()
 					print("Please choose between Y and N")
 					print()
@@ -259,7 +259,7 @@ def login():
 	while True:
 		choice = input("Select Your Option: \n1. Take Quiz\n2. Manage Quiz\n")
 		choice = choice.upper()
-		if choice != "1" and choice != "2":
+		if choice not in ("1", "2"):
 			print("Please choose between T and M")
 			print()
 		else:
@@ -274,7 +274,7 @@ def quiz():
 			subj = input("Choose the subject (PST or Sci): ")
 			subj = subj.upper()
 
-			if subj != "PST" and subj != "SCI":
+			if subj not in ("PST", "SCI"):
 				print()
 				print("Please choose between PST or Sci")
 				print()
@@ -318,7 +318,7 @@ def ask_ques(num):
 		print("Q"+str(q_num)+": "+ques_lst[num][0]+"\n"+ques_lst[num][1]+"\n"+ques_lst[num][2]+"\n"+ques_lst[num][3]+"\n"+ques_lst[num][4])  # Generating Q.No. before comma and printing question after comma by accessing it through list of questions and "Q.No." key value
 		ans = input("Choose the correct answer: ")  # Take answer as input from user
 		ans = ans.lower()
-		if ans != "a" and ans != "b" and ans != "c" and ans != "d" and ans != "":  # If user press Enter an empty string will be stored in ans
+		if ans not in ("a", "b", "c", "d", ""):  # If user press Enter an empty string will be stored in ans
 			print()  # To leave an empty line
 			print("Please choose a valid option (a/b/c/d). Or press 'Enter' to skip the question")
 		# Repeatedly ask the question untill user enters a valid option
@@ -365,7 +365,7 @@ def restart():
 		cont = input("Do you want to replay? (Y/N): ")
 		print()
 		cont = cont.upper()
-		if cont != "Y" and cont != "N":
+		if cont not in ("Y", "N"):
 			print()
 			print("Please choose a valid option (Y/N): ")
 			continue
@@ -396,7 +396,7 @@ while True:
 			while True:
 				ch = input("Do you want to quit the app? (Y/N): ")
 				ch = ch.upper()
-				if ch != "Y" and ch != "N":
+				if ch not in ("Y", "N"):
 					print()
 					print("Please choose between Y and N")
 					print()
@@ -413,7 +413,7 @@ while True:
 				print()
 				ch = input("Do you want to quit the app? (Y/N): ")
 				ch = ch.upper()
-				if ch != "Y" and ch != "N":
+				if ch not in ("Y", "N"):
 					print()
 					print("Please choose between Y and N")
 					print()
