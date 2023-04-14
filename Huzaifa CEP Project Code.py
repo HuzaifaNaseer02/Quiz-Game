@@ -179,7 +179,6 @@ def quiz_view(subj): #Take subject as argument
 				add_ques(subj) # again add question of subject for which view function is called
 			else:
 				return v_choice # If answer is negative then return the answer
-				break # break out of loop
 	else: # If first choice is negative then,
 		return cho_ice # return the first choice
 
